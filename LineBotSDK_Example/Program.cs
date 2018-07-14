@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using LineBotSDK;
+using LineBotSDK.Utility;
 
 namespace LineBotSDK_Example
 {
@@ -15,9 +15,9 @@ namespace LineBotSDK_Example
             string userid = "";
             string image_url = "https://i0.wp.com/blog.patw.me/wp-content/uploads/2017/05/ZcNMMLg.png?fit=800%2C416&ssl=1";
 
-            LineBotSDK.Utility.MessageUtility.PushTextMessage(token, userid, "Hi");
+            MessageUtility.PushTextMessage(token, userid, "Hi");
 
-            LineBotSDK.Utility.MessageUtility.PushImageMessage(token, userid, image_url, image_url);
+            MessageUtility.PushImageMessage(token, userid, image_url, image_url);
         }
     }
 }
