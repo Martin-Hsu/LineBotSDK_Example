@@ -40,7 +40,7 @@ namespace LineBotSDK_Example
             Size size = new Size(800, 416);
             var actions = new List<IImagemapAction>();
             actions.Add(new ImagemapMessageAction("text", new ImagemapArea(0, 0, 400, 416)));
-            actions.Add(new ImagemapURIAction("https://goolgle.com.tw", new ImagemapArea(400, 0, 400, 416)));
+            actions.Add(new ImagemapURIAction("https://www.google.com/", new ImagemapArea(400, 0, 400, 416)));
             MessageUtility.PushImagemapMessage(token, userid, image_url, "altText", size, actions);
 
         }
