@@ -16,5 +16,5 @@ PushVideoMessage
 PushStickerMessage
 ```
 
-Deatail infomation please reference the gitbook.
+[Deatail infomation please reference the gitbook.](https://martinhsu.gitbook.io/linebotsdk/)
 
