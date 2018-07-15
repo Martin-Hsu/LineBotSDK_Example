@@ -9,6 +9,10 @@ You can see the gitbook, and I will introduce all of functions for LineBotSDK.
 PushTextMessage
 
 PushImageMessage
+
+PushVideoMessage
+
+PushStickerMessage
 ```
 
 Deatail infomation please reference the gitbook.
