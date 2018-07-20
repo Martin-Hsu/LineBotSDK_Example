@@ -21,6 +21,18 @@ PushLocationMessage
 
 PushImagemapMessage
 ```
+### LiffControl:
+```
+AddingLIFFApp
+
+UpdateLIFFApp
+
+GetAllLIFFApps
+
+DeleteLIFFApp
+
+DeleteAllLIFFApps
+```
 
 [Deatail infomation please reference the gitbook.](https://martinhsu.gitbook.io/linebotsdk/)
 
