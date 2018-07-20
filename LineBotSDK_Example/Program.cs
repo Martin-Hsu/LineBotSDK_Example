@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LineBotSDK.LIFF;
 using LineBotSDK.Struct;
 using LineBotSDK.Struct.Messages;
 using LineBotSDK.Utility;
@@ -18,6 +19,7 @@ namespace LineBotSDK_Example
             string image_url = "https://i0.wp.com/blog.patw.me/wp-content/uploads/2017/05/ZcNMMLg.png?fit=800%2C416&ssl=1";
             string mp4_url = "https://www.legacyvet.com/sites/default/files/videos/Video%20%281%29.mp4";
 
+            // --------- Send Message ---------
             // Send the text message to user
             MessageUtility.PushTextMessage(token, userid, "Hi");
 
@@ -42,6 +44,28 @@ namespace LineBotSDK_Example
             actions.Add(new ImagemapMessageAction("text", new ImagemapArea(0, 0, 400, 416)));
             actions.Add(new ImagemapURIAction("https://www.google.com/", new ImagemapArea(400, 0, 400, 416)));
             MessageUtility.PushImagemapMessage(token, userid, image_url, "altText", size, actions);
+
+            // --------- Control the LIFF --------- 
+            string url = "https://24h.pchome.com.tw/";
+            string url2 = "https://www.google.com.tw/";
+
+            LiffControl liffControl = new LiffControl(token);
+            // Adds an app to LIFF
+            var res = liffControl.AddingLIFFApp(LineBotSDK.LIFF.Struct.SizeOfLIFF.compact, url);
+
+            // Updates LIFF app settings.
+            liffControl.UpdateLIFFApp(res.liffId, LineBotSDK.LIFF.Struct.SizeOfLIFF.full, url2);
+
+            // Gets information on all the LIFF apps registered in the channel.
+            var apps = liffControl.GetAllLIFFApps();
+
+            // Deletes a LIFF app.
+            liffControl.DeleteLIFFApp(res.liffId);
+
+            // Deletes all LIFF apps.
+            liffControl.DeleteAllLIFFApps();
+
+
 
         }
     }
